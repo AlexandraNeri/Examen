@@ -1,0 +1,34 @@
+<body>
+    <div class="w3-container">
+            
+            
+                    <h1>WELCOME</h1>
+</div>
+
+<table class="w3-table w3-striped w3-centered tr td ">
+   <tr>
+        <th>Name:</th>
+        <th>Price:</th>
+        <th>Description:</th>
+        <th>Image:</th>
+  </tr>
+
+
+    <tr *ngFor = "let product of products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+        
+
+        <td><img [src]="product.img" [style.width.px] = "150"[style.padding.px]="1"> </td>
+
+        
+        <td>
+            <button class="w3-btn  w3-ripple" (click)="updateProduct()">Edit</button>
+            <button class="w3-btn w3-ripple" (click)="removeProduct(product)">Delete</button>
+        </td>
+    </tr>
+
+</table>
+
+</body>
